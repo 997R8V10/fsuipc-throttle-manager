@@ -8,12 +8,12 @@ ipc.log("Starting...")
 
 throttles = {
   {
-    {0x310A,0x310A},                    -- Throttle disconnect offset
-    {0x40,0x80},                        -- Throttle disconnect mask
+    {0x310A,0x310B},                    -- Throttle disconnect offset
+    {0x40,0x40},                        -- Throttle disconnect mask
     0x3330,                             -- Throttle axis offset
     0x333A,                             -- Throttle limit offset
     0,                                  -- Throttle limit override (J41 reads -4096, but it's really -16384), 0 to disable
-    {65820,65821}, -- {0x088C,0x0924},  -- Throttle set offset or control (J41 needs control)
+    {65820,65822}, -- {0x088C,0x0924},  -- Throttle set offset or control (J41 needs control)
     1,                                  -- Throttle toggle flag
     1,                                  -- Throttle forward ratio
     1,                                  -- Throttle reverse ratio
@@ -35,12 +35,12 @@ throttles = {
 	false,                              -- Starting state (true = reverse)
   },
   {
-    {0x310B,0x310B},                    -- Throttle disconnect offset
-    {0x40,0x80},                        -- Throttle disconnect mask
+    {0x310A,0x310B},                    -- Throttle disconnect offset
+    {0x80,0x80},                        -- Throttle disconnect mask
     0x3332,                             -- Throttle axis offset
     0x333A,                             -- Throttle limit offset
     0,                                  -- Throttle limit override (J41 reads -4096, but it's really -16384), 0 to disable
-    {65822,65823}, -- {0x09BC,0x0A54},  -- Throttle set offset or control (J41 needs control)
+    {65821,65823}, -- {0x09BC,0x0A54},  -- Throttle set offset or control (J41 needs control)
     2,                                  -- Throttle toggle flag
     1,                                  -- Throttle forward ratio
     1,                                  -- Throttle reverse ratio
