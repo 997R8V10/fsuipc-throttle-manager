@@ -5,6 +5,7 @@
 
 ## Description
 This Throttle Manager provides the functionality to have both forward and reverse thrust on single axes by allowing the user to toggle between modes through joystick buttons. It can be configured to auto-toggle to forward thrust, configured for various amount of throttle levers, and works for almost every aircraft in Flight Simulator.
+A huge thanks to PilotJohn who originally created Throttle Manager 1.2.0. You can find the original here: https://github.com/IslandJohn/SimTools/tree/master/Miscellaneous
 
 ## Pre-requisites
 This requires a registered copy of FSUIPC. Any version for FSX or P3D including v4 will work.
@@ -38,7 +39,7 @@ Depending on the amount of levers you have, you may want to have 1, 2, or even 4
 	2. Check `Select for FS control`
 	3. Choose `LuaToggle ThrottleManager`
 	4. Enter `N` for the `Parameter` where `N` is the number of the first reverser the button will toggle. For example, if you had 2 toggle buttons, the first toggle button would map to both 1 and 2, but we would input 1 initially, and the second toggle button would map to both 3 and 4, but we would input 3 initially.
-	5. Open `FSUIPC*.ini` and go to the `[Buttons` section.
+	5. Open `FSUIPC*.ini` and go to the `[Buttons]` section.
 	6. Find the lines with `-{LuaToggle ThrottleManger}-` and copy and paste them to cover all 4 reversers. \
 	 An example is as follows for one toggle button:
     ```
