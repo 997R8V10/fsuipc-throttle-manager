@@ -1,45 +1,10 @@
--- Throttle Manager 1.1.3
--- E-mail: pilotjohn at gearsdown.com
--- Sounds: http://www.freesound.org/people/milton./packs/5284/
---
--- Manage throttles to provide both forward and reverse thrust
--- on single axes by allowing functionality toggle through dedicated
--- joystick buttons (such as those below the detent on Saitek quadrants).
--- Can be configured to auto-toggle to forward thrust, and in many other ways. 
--- Setup (do steps 2-5 for each throttle to manage):
---
--- 1. Edit "FSUIPC.ini" and add (substitute X for 1 or next # if exists):
---     [Auto]
---     X=Lua ThrottleManager
---
--- 2. In FSX "Settings" "Controls",
---      delete joystick assignment for throttle N
---
--- 3. In FSUIPC "Axis Assignment",
---      "MOVE" "LEVER",
---      select "Send direct to FSUIPC Calibration" 
---      and check "Throttle N"
---
--- 4. In FSUIPC "Joystick Calbiration",
---      on "3 of 11: Separate throttles per engine",
---      check "No reverse Zone",
---      and "Set" "Min" and "Max" for "Throttle N"
---
--- 5. In FSUIPC "Buttons + Switches",
---     "PRESS" "BUTTON",
---     check "Select for FS control",
---     choose "LuaToggle ThrottleManager",
---     and enter "N" for "Paramater"
---
--- 6. Configure below as desired.
-
 ipc.log("Starting...")
 
 --------------------------------------------------------------------------------
 -- Configuration
 
 -- Display start-up banner for a duration, uncomment to enable
-ipc.display("Throttle Manager for FSUIPC", 3)
+-- ipc.display("Throttle Manager for FSUIPC", 3)
 
 throttles = {
   {
@@ -48,7 +13,7 @@ throttles = {
     0x3330,                             -- Throttle axis offset
     0x333A,                             -- Throttle limit offset
     0,                                  -- Throttle limit override (J41 reads -4096, but it's really -16384), 0 to disable
-    {0x088C,0x0924}, -- {65820,65821},  -- Throttle set offset or control (J41 needs control)
+    {65820,65821}, -- {0x088C,0x0924},  -- Throttle set offset or control (J41 needs control)
     1,                                  -- Throttle toggle flag
     1,                                  -- Throttle forward ratio
     1,                                  -- Throttle reverse ratio
@@ -75,7 +40,7 @@ throttles = {
     0x3332,                             -- Throttle axis offset
     0x333A,                             -- Throttle limit offset
     0,                                  -- Throttle limit override (J41 reads -4096, but it's really -16384), 0 to disable
-    {0x09BC,0x0A54}, -- {65822,65823},  -- Throttle set offset or control (J41 needs control)
+    {65822,65823}, -- {0x09BC,0x0A54},  -- Throttle set offset or control (J41 needs control)
     2,                                  -- Throttle toggle flag
     1,                                  -- Throttle forward ratio
     1,                                  -- Throttle reverse ratio
