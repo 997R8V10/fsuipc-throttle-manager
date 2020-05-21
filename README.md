@@ -11,7 +11,7 @@ A huge thanks to PilotJohn who originally created Throttle Manager 1.2.0. You ca
 This requires a registered copy of FSUIPC. Any version for FSX or P3D including v4 will work.
 
 ## Installation and Setup
-1. Depending on how many throttle levers you have, copy the appropriate `ThrottleManager.lua.*lev` file into the `Modules` folder.
+1. Depending on how many throttle levers you have, copy the appropriate `ThrottleManager.lua.*lev` file into the `Modules` folder and rename it to `ThrottleManager.lua`.
 	1. If you wish to have throttle toggle sounds, copy all the `.wav` files into the `Modules` folder.
 2. Edit the `FSUIPC*.ini` and add the following (where `X` is the next number in the sequence, or `1` if it's the first entry):
 	```
